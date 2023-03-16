@@ -1,0 +1,140 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  min-height: 105px;
+  color: $color-alice-blue;
+  background:$bg-black-pearl;
+
+  @include vp-1023 {
+    position: relative;
+    min-height: 88px;
+  }
+
+  @include vp-767 {
+    min-height: 60px;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-right: 5%;
+
+  @include vp-1023 {
+    padding-top: 10px;
+    padding-right: 50px;
+  }
+
+  @include vp-767 {
+    padding-right: 35px;
+  }
+}
+
+.header__logo {
+  display: block;
+  width: 215px;
+  height: 55px;
+
+  @include vp-1023 {
+    padding-top: 10px;
+  }
+
+  @include vp-767 {
+    width: 55px;
+    padding-right: 20px;
+    padding-top: 15px;
+  }
+}
+
+.header__contacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(225px, 1fr));
+  column-gap: 10%;
+  width: 40%;
+  padding: 15px 5px;
+  margin-right: 0 auto;
+
+  box-sizing: border-box;
+
+  @include vp-1439 {
+    width: 50%;
+  }
+
+  @include vp-1023 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: none;
+    width: auto;
+    gap: 0;
+    padding: 0;
+  }
+}
+
+.header__contacts-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-alice-blue;
+
+  @include vp-1023 {
+    padding: 20px 10px;
+    margin-right: 20px;
+  }
+
+  @include vp-767 {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include hover-focus {
+    color: $color-deep-sky-blue;
+    filter: drop-shadow(0 0 3px $color-deep-sky-blue);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.header__contacts-icon {
+  margin-right: 15px;
+
+  @include vp-1023 {
+    margin: 0;
+  }
+}
+
+.header__contacts-content {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.header__button {
+  color: $color-alice-blue;
+  border: 1px solid $color-alice-blue;
+  min-width: 160px;
+  margin-top: 5px;
+
+  @include vp-1023 {
+    display: none;
+  }
+
+  @include hover-focus {
+    color: $color-deep-sky-blue;
+    border-color: $color-deep-sky-blue;
+    filter: drop-shadow(0 0 3px $color-deep-sky-blue);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+

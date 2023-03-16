@@ -1,0 +1,178 @@
+.catalog {
+  width: 100%;
+  background-color: $color-black-pearl;
+  color: $color-default-white;
+  font-family: $ff-Roboto-Condensed;
+  padding-top: 65px;
+  padding-bottom: 140px;
+
+  @include vp-1023 {
+    padding-top: 55px;
+    padding-bottom: 74px;
+  }
+
+  @include vp-767 {
+    padding-top: 45px;
+    padding-bottom: 86px;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 55px;
+    padding: 0;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+
+    & span + span {
+      display: none;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 38px;
+    }
+
+    @include vp-767 {
+      display: block;
+      margin-bottom: 31px;
+      font-size: 28px;
+      line-height: 39px;
+
+      & span {
+        display: none;
+      }
+
+      & span + span {
+        display: block;
+      }
+    }
+  }
+
+  ul {
+    display: grid;
+    gap: 30px;
+    grid-auto-rows: minmax(650px, 1fr);
+    grid-template-columns: repeat(3, minmax(150px, 350px));
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include vp-767 {
+      row-gap: 30px;
+    }
+  }
+
+  li {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    position: relative;
+
+    &:nth-child(1n) {
+      @include graphic-retina('card1-desktop', $color-deep-sky-blue);
+    }
+
+    &:nth-child(2n) {
+      @include graphic-retina('card2-desktop', $color-deep-sky-blue);
+    }
+
+    &:nth-child(3n) {
+      @include graphic-retina('card3-desktop', $color-deep-sky-blue);
+    }
+
+    @include vp-1023 {
+      min-height: 250px;
+
+      &:nth-child(1n) {
+        @include graphic-retina('card1-tablet', $color-deep-sky-blue);
+      }
+
+      &:nth-child(2n) {
+        @include graphic-retina('card2-tablet', $color-deep-sky-blue);
+      }
+
+      &:nth-child(3n) {
+        @include graphic-retina('card3-desktop', $color-deep-sky-blue);
+      }
+    }
+
+    @include vp-767 {
+      &:nth-child(1n) {
+        @include graphic-retina('card1-mobile', $color-deep-sky-blue);
+      }
+
+      &:nth-child(2n) {
+        @include graphic-retina('card2-mobile', $color-deep-sky-blue);
+      }
+
+      &:nth-child(3n) {
+        @include graphic-retina('card3-mobile', $color-deep-sky-blue);
+      }
+    }
+
+    &::before {
+      background: $color-black-pearl-50;
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transition: 0.3s background-color;
+      width: 100%;
+    }
+
+    &::after {
+      background-color: $color-deep-sky-blue;
+      background-image: url('./../img/svg/card-arrow.svg');
+      background-position: calc(50% + 3px);
+      background-repeat: no-repeat;
+      background-size: 6px;
+      border-radius: 3px 0 0 0;
+      bottom: 0;
+      content: '';
+      height: 60px;
+      position: absolute;
+      right: 0;
+      width: 60px;
+
+      @include vp-767 {
+        background-position: calc(50% + 2px);
+        background-size: 4px;
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    @include hover-focus {
+      &::before {
+        background: none;
+      }
+    }
+  }
+
+  a {
+    color: $color-default-white;
+    font-size: 20px;
+    line-height: 150%;
+    margin: 0;
+    padding: 46px 40px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    @include vp-1023 {
+      padding: 36px 45px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      padding: 30px;
+    }
+  }
+}

@@ -1,64 +1,276 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smart Device">
+  <title>ProjectName</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- header -->
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+
+        <a class="header__logo logo">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/svg/logo-mob-header.svg">
+            <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип компании Smart Device.">
+          </picture>
+        </a>
+
+        <div class="header__contacts">
+          <p class="visually-hidden">Наши контакты.</p>
+          <a class="header__contacts-link" href="mailto:info@sd.ru" aria-label="Написать нам info@sd.ru.">
+            <svg class="header__contacts-icon" width="20" height="20">
+              <use href="img/sprite.svg#mail"></use>
+            </svg>
+            <span class="header__contacts-content">info@sd.ru</span>
+          </a>
+
+          <a class="header__contacts-link" href="tel:+74950005252" aria-label="Позвонить нам +7 495 000 52 52.">
+            <svg class="header__contacts-icon" width="20" height="20">
+              <use href="img/sprite.svg#tel"></use>
+            </svg>
+            <span class="header__contacts-content">+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
+          </a>
+        </div>
+
+        <a class="header__button btn" href="#">Заказать звонок</a>
+
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <h1 class="visually-hidden">Smart Device - производство и монтаж печатных плат</h1>
+
+    <!-- hero -->
+
+    <section class="hero">
+      <picture class="hero__image">
+        <source type="image/webp" media="(max-width: 767px)"
+          srcset="img/hero-mobile.webp 1x, img/hero-mobile@2x.webp 2x">
+        <source type="image/webp" media="(max-width: 1023px)"
+          srcset="img/hero-tablet.webp 1x, img/hero-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/hero-desktop.webp 1x, img/hero-desktop@2x.webp 2x">
+        <source media="(max-width: 767px)" srcset="img/hero-mobile.jpg 1x, img/hero-mobile@2x.jpg 2x">
+        <source media="(max-width: 1023px)" srcset="img/hero-tablet.jpg 1x, img/hero-tablet@2x.jpg 2x">
+        <img src="img/hero-desktop.jpg" width="1920" height="880" alt="Печатные платы." srcset="img/hero-desktop@2x.jpg 2x">
+      </picture>
+
+      <div class="container">
+        <div class="hero__content">
+          <h2>Печатные платы</h2>
+          <p>Производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
+          <a class="hero__button btn" href="#feedback">
+            <span class="hero__button-text-desktop">Получить бесплатную консультацию</span>
+            <span class="hero__button-text-mobile">Бесплатная консультация</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+      <!-- advantages -->
+
+    <section class="advantages">
+      <h2 class="visually-hidden">Преимущества компании Smart Device.</h2>
+      <div class="container">
+
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <svg aria-hidden="true" focusable="false" width="35" height="35">
+              <use href="img/sprite.svg#stopwatch"></use>
+            </svg>
+            <h3>Оперативные сроки</h3>
+            <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять
+              заказы плат и комплектующих в&nbsp;самые короткие сроки</p>
+          </li>
+
+          <li class="advantages__item">
+            <svg aria-hidden="true" focusable="false" width="35" height="35">
+              <use href="img/sprite.svg#suppliers"></use>
+            </svg>
+            <h3>Крупные поставщики</h3>
+            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+              Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
+          </li>
+
+          <li class="advantages__item">
+            <svg aria-hidden="true" focusable="false" width="35" height="35">
+              <use href="img/sprite.svg#incognita"></use>
+            </svg>
+            <h3>Полная конфиденциальность</h3>
+            <p>По&nbsp;желанию клиента&nbsp;&nbsp;мы обеспечиваем полную конфиденциальность.</p>
+          </li>
+
+          <li class="advantages__item">
+            <svg aria-hidden="true" focusable="false" width="35" height="35">
+              <use href="img/sprite.svg#price"></use>
+            </svg>
+            <h3>Персонализация стоимости</h3>
+            <p>Мы&nbsp;&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену,
+              которая Вас устраивает.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+      <!-- about -->
+
+    <section class="about">
+      <div class="about__container container" data-accordion="parent" data-about-accordion>
+        <img class="about__image" src="img/2022.png" width="150" height="320" aria-hidden="true" alt="2022-й год.">
+
+        <div class="about__content" data-accordion="element">
+          <h2>О компании</h2>
+          <p>
+            Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
+          </p>
+          <p>
+            Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span data-about-accordion="mobile"> Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
+          </p>
+          <div class="no-js" data-accordion="content">
+            <p>
+              Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
+            </p>
+
+            <p>
+              Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов
+            </p>
           </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
+          <button class="about__button btn" type="button" data-accordion="button">Подробнее</button>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
+    <!-- catalog -->
+
+    <section class="catalog">
+      <div class="container">
+        <h2>
+          <span>Smart Device предлагает следующие товары и&nbsp;услуги</span>
+          <span>Товары и&nbsp;услуги Smart&nbsp;Device</span>
+        </h2>
+        <ul>
+          <li>
+            <a href="#"> Производство<br>печатных плат</a>
+          </li>
+          <li>
+            <a href="#"> Монтаж печатных<br>плат</a>
+          </li>
+          <li>
+            <a href="#"> Комплектующие<br>для светотехники</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__social social">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип компании Smart Device." aria-hidden="true">
+          </a>
         </div>
+        <ul class="social__list">
+          <li>
+            <a class="social__link" href="#" aria-label="Наша страница в Одноклассниках.">
+              <svg class="social__icon" width="30" height="30">
+                <use xlink:href="./img/sprite.svg#ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social__link" href="#" aria-label="Наше сообщество в Вконтакте.">
+              <svg class="social__icon" width="30" height="30">
+                <use xlink:href="./img/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social__link" href="#" aria-label="Наш профиль в Pinterest.">
+              <svg class="social__icon" width="30" height="30">
+                <use xlink:href="./img/sprite.svg#pinterest"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__accordion accordion" data-accordion="parent" data-destroy="(max-width: 767px)" data-single="">
+        <div class="accordion__section" data-accordion="element">
+          <button class="accordion__button" data-accordion="button" type="button">Разделы сайта</button>
+          <div class="footer__nav-list-wrapper" data-accordion="content">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="#">О Компании</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Продукты</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Производство печатных плат</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Монтаж печатных плат</a>
+              </li>
+            </ul>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="#">Комплектующие</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Доставка</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion__section" data-accordion="element">
+          <button class="accordion__button" data-accordion="button" type="button">Наш офис</button>
+          <div class="no-js" data-accordion="content">
+            <ul class="footer__contacts-list">
+              <li class="footer__contacts-item">
+                <a data-link="address" href="https://goo.gl/maps/KDxpRmWTAMP8CauD7">г. Мытищи, Олимпийский проспект,
+                  д.10</a>
+              </li>
+              <li class="footer__contacts-item">
+                <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+              </li>
+              <li class="footer__contacts-item">
+                <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+              </li>
+              <li class="footer__contacts-item">
+                <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
+  </footer>
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>
