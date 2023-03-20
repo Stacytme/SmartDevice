@@ -65,7 +65,8 @@
         <source type="image/webp" srcset="img/hero-desktop.webp 1x, img/hero-desktop@2x.webp 2x">
         <source media="(max-width: 767px)" srcset="img/hero-mobile.jpg 1x, img/hero-mobile@2x.jpg 2x">
         <source media="(max-width: 1023px)" srcset="img/hero-tablet.jpg 1x, img/hero-tablet@2x.jpg 2x">
-        <img src="img/hero-desktop.jpg" width="1920" height="880" alt="Печатные платы." srcset="img/hero-desktop@2x.jpg 2x">
+        <img src="img/hero-desktop.jpg" width="1920" height="880" alt="Печатные платы."
+          srcset="img/hero-desktop@2x.jpg 2x">
       </picture>
 
       <div class="container">
@@ -80,7 +81,7 @@
       </div>
     </section>
 
-      <!-- advantages -->
+    <!-- advantages -->
 
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества компании Smart Device.</h2>
@@ -92,7 +93,8 @@
               <use href="img/sprite.svg#stopwatch"></use>
             </svg>
             <h3>Оперативные сроки</h3>
-            <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять
+            <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить
+              и&nbsp;доставлять
               заказы плат и комплектующих в&nbsp;самые короткие сроки</p>
           </li>
 
@@ -125,7 +127,7 @@
       </div>
     </section>
 
-      <!-- about -->
+    <!-- about -->
 
     <section class="about">
       <div class="about__container container" data-accordion="parent" data-about-accordion>
@@ -134,18 +136,27 @@
         <div class="about__content" data-accordion="element">
           <h2>О компании</h2>
           <p>
-            Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
+            Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
+            технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
           </p>
           <p>
-            Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span data-about-accordion="mobile"> Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
+            Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+            REFOND. <span data-about-accordion="mobile"> Печатные платы и&nbsp;комплектующие Service Devices применяются
+              на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома,
+              СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
           </p>
           <div class="no-js" data-accordion="content">
             <p>
-              Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
+              Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
+              1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день.
+              На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов
+              присутствия.
             </p>
 
             <p>
-              Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов
+              Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой
+              внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших
+              клиентов
             </p>
           </div>
           <button class="about__button btn" type="button" data-accordion="button">Подробнее</button>
@@ -175,6 +186,55 @@
       </div>
     </section>
 
+    <!-- form -->
+
+    <section class="form" id="form">
+      <div class="form__container container " data-form-validate>
+        <div class="form__image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="img/paper_airplane.webp">
+            <img src="img/paper_airplane.png" width="510" height="285"
+              alt="Бумажный самолетик.">
+          </picture>
+        </div>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <h2>Остались вопросы? Задайте их нам!</h2>
+          <p>Мы проконсультируем Вас бесплатно</p>
+
+          <div class="form__inputs-wrapper">
+            <label data-required data-validate-type="text" data-limitation="name"
+              data-message-base="Поле обязательно к заполнению">
+              <input type="text" name="name" placeholder="Имя" minlength="1" required>
+              <span>Имя</span>
+            </label>
+
+            <label data-required data-on-input-validate data-validate-type="phone"
+              data-message-base="Поле обязательно к заполнению"
+              data-message-extra="Проверьте корректность заполнения поля">
+              <input type="tel" name="phone" placeholder="Телефон" required>
+              <span>Телефон</span>
+            </label>
+
+            <div class="form__textarea-wrapper">
+              <label>
+                <textarea name="question" placeholder="Ваш вопрос"></textarea>
+                <span>Ваш вопрос</span>
+              </label>
+            </div>
+
+            <div class="form__checkbox-wrapper">
+              <label data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
+                <input type="checkbox" name="personal-data" required checked>
+                <span class="form__checkbox-mark"></span>
+                <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+              </label>
+            </div>
+
+            <button class="form__button btn" type="submit">Задать вопрос</button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 
   <!-- footer -->
@@ -249,7 +309,7 @@
           <div class="no-js" data-accordion="content">
             <ul class="footer__contacts-list">
               <li class="footer__contacts-item">
-                <a data-link="address" href="https://goo.gl/maps/KDxpRmWTAMP8CauD7">г. Мытищи, Олимпийский проспект,
+                <a data-link="address" href="https://goo.gl/maps/KDxpRmWTAMP8CauD7">г. Мытищи, Олимпийский проспект,<br>
                   д.10</a>
               </li>
               <li class="footer__contacts-item">
@@ -268,6 +328,60 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal -->
+
+  <div class="modal modal--preload modal--fit-content" data-modal="feedback">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content form form--modal">
+        <div class="form__container form__container--modal" data-form-validate>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <h2>Закажите звонок</h2>
+            <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+
+            <div class="form__inputs-wrapper form__inputs-wrapper--modal">
+              <label data-required data-validate-type="text" data-limitation="name"
+                data-message-base="Поле обязательно к заполнению">
+                <input type="text" name="name" placeholder="Имя" minlength="1" required>
+                <span>Имя</span>
+              </label>
+
+              <label data-required data-on-input-validate data-validate-type="phone"
+                data-message-base="Поле обязательно к заполнению"
+                data-message-extra="Проверьте корректность заполнения поля">
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <span>Телефон</span>
+              </label>
+
+              <div class="form__wide-input-wrapper form__wide-input-wrapper--modal">
+                <label>
+                  <textarea name="question" placeholder="Ваш вопрос"></textarea>
+                  <span>Ваш вопрос</span>
+                </label>
+              </div>
+
+              <div class="form__personal-checkbox-wrapper form__personal-checkbox-wrapper--modal">
+                <label data-validate-type="checkbox"
+                  data-message-base="Поле обязательно к заполнению">
+                  <input type="checkbox" name="personal-data" required checked>
+                  <span class="form__checkbox-mark"></span>
+                  <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                </label>
+              </div>
+
+              <button class="form__button form__button--modal btn" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть модальное окно." data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
