@@ -72,48 +72,43 @@
     display: flex;
     margin: 0;
     padding: 0;
+    background-color: $color-deep-sky-blue;
     background-size: cover;
     position: relative;
 
-    &:nth-child(1n) {
-      @include graphic-retina('card1-desktop', $color-deep-sky-blue);
-    }
+    @include graphic-retina('card1-desktop');
 
-    &:nth-child(2n) {
-      @include graphic-retina('card2-desktop', $color-deep-sky-blue);
+    &:nth-child(3n - 1) {
+      @include graphic-retina('card2-desktop');
     }
 
     &:nth-child(3n) {
-      @include graphic-retina('card3-desktop', $color-deep-sky-blue);
+      @include graphic-retina('card3-desktop');
     }
 
     @include vp-1023 {
       min-height: 250px;
 
-      &:nth-child(1n) {
-        @include graphic-retina('card1-tablet', $color-deep-sky-blue);
-      }
+      @include graphic-retina('card1-tablet');
 
-      &:nth-child(2n) {
-        @include graphic-retina('card2-tablet', $color-deep-sky-blue);
+      &:nth-child(3n - 1) {
+        @include graphic-retina('card2-tablet');
       }
 
       &:nth-child(3n) {
-        @include graphic-retina('card3-desktop', $color-deep-sky-blue);
+        @include graphic-retina('card3-desktop');
       }
     }
 
     @include vp-767 {
-      &:nth-child(1n) {
-        @include graphic-retina('card1-mobile', $color-deep-sky-blue);
-      }
+      @include graphic-retina('card1-mobile');
 
-      &:nth-child(2n) {
-        @include graphic-retina('card2-mobile', $color-deep-sky-blue);
+      &:nth-child(3n - 1) {
+        @include graphic-retina('card2-mobile');
       }
 
       &:nth-child(3n) {
-        @include graphic-retina('card3-mobile', $color-deep-sky-blue);
+        @include graphic-retina('card3-mobile');
       }
     }
 

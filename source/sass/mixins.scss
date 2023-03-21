@@ -23,6 +23,12 @@
 
   @include retina {
     @include graphic-webp("#{$filename}@2x", $background-color, $extname);
+
+    @include retina {
+      html & {
+        @include graphic-webp("#{$filename}@2x", $background-color, $extname);
+      }
+    }
   }
 }
 
