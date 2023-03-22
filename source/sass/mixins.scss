@@ -4,31 +4,37 @@
   }
 }
 
-@mixin graphic-webp($filename, $background-color: #000000, $extname: "jpg") {
-  $webp: url("./../img/#{$filename}.webp");
-
-  @supports (background-image: $webp) {
-    background-color: $background-color;
-    background-image: $webp;
+@mixin graphic-webp($filename, $extname: "jpg") {
+  @supports (background-image: "../img/#{$filename}-desktop.webp") {
+    @include graphic-adaptive($filename, "webp");
   }
 
-  @supports not (background-image: $webp) {
-    background-color: $background-color #000000;
-    background-image: url("./../img/#{$filename}.#{$extname}");
+  @supports not (background-image: "../img/#{$filename}-desktop.webp") {
+    @include graphic-adaptive($filename, $extname);
   }
 }
 
-@mixin graphic-retina($filename, $background-color: #000000, $extname: "jpg") {
-  @include graphic-webp($filename, $background-color, $extname);
+@mixin graphic-retina($filename, $extname: "jpg") {
+  background-image: url("../img/#{$filename}.#{$extname}");
 
   @include retina {
-    @include graphic-webp("#{$filename}@2x", $background-color, $extname);
+    background-image: url("../img/#{$filename}@2x.#{$extname}");
+  }
+}
 
-    @include retina {
-      html & {
-        @include graphic-webp("#{$filename}@2x", $background-color, $extname);
-      }
+@mixin graphic-adaptive($filename, $extname: "jpg") {
+  @media (min-width: $vp-1024) {
+    @include graphic-retina("#{$filename}-desktop", $extname);
+  }
+
+  @media (min-width: $vp-768) {
+    @media (max-width: ($vp-1024 - 1)) {
+      @include graphic-retina("#{$filename}-tablet", $extname);
     }
+  }
+
+  @include vp-767 {
+    @include graphic-retina("#{$filename}-mobile", $extname);
   }
 }
 
