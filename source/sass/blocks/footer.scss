@@ -6,19 +6,14 @@
   display: flex;
   gap: 30px;
   justify-content: space-between;
-  padding-bottom: 50px;
-  padding-top: 50px;
   margin: 0 auto;
   max-width: calc(1220px + 64px);
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 50px 73px 50px 31px;
   width: 100%;
 
   @include vp-1023 {
     flex-wrap: wrap;
-    padding-bottom: 65px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px 50px 65px;
   }
 
   @include vp-767 {
@@ -38,7 +33,7 @@
 
 .footer__nav-list-wrapper {
   display: flex;
-  column-gap: 12px;
+  column-gap: 28px;
   max-width: 470px;
 
   @include vp-1023 {
@@ -51,10 +46,6 @@
   padding: 0;
   list-style-type: none;
   max-width: 220px;
-
-  @include vp-1023 {
-    margin-bottom: 5px;
-  }
 
   @include vp-767 {
     width: 100%;
@@ -70,10 +61,6 @@
 
   &:nth-child(3n) {
     break-after: avoid-column;
-  }
-
-  @include vp-1023 {
-    margin-bottom: 7px;
   }
 }
 

@@ -4,16 +4,6 @@
   }
 }
 
-@mixin graphic-webp($filename, $extname: "jpg") {
-  @supports (background-image: "../img/#{$filename}-desktop.webp") {
-    @include graphic-adaptive($filename, "webp");
-  }
-
-  @supports not (background-image: "../img/#{$filename}-desktop.webp") {
-    @include graphic-adaptive($filename, $extname);
-  }
-}
-
 @mixin graphic-retina($filename, $extname: "jpg") {
   background-image: url("../img/#{$filename}.#{$extname}");
 
