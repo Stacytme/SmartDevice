@@ -80,14 +80,6 @@
   }
 }
 
-[data-about-accordion="mobile"] {
-  display: inline;
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
 .about__button {
   min-width: 180px;
   margin-top: 25px;

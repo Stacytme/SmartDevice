@@ -11,3 +11,11 @@
   transition: max-height 0.3s;
   overflow: hidden;
 }
+
+[data-about-accordion="mobile"] {
+  display: inline;
+
+  @include vp-767 {
+    display: none;
+  }
+}
