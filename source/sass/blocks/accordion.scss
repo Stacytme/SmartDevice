@@ -94,7 +94,7 @@
 .accordion__section.is-active {
   padding-bottom: 20px;
 
-  & .accordion__button::before {
+  .accordion__button::before {
     transform: rotate(0);
   }
 }

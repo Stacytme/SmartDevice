@@ -2,9 +2,9 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Smart Device">
   <title>ProjectName</title>
   <link rel="stylesheet" href="css/style.min.css">
@@ -75,7 +75,7 @@
         <div class="container">
           <div class="hero__content">
             <h2>Печатные платы</h2>
-            <p>Производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
+            <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
             <a class="hero__button btn" href="#feedback">
               <span class="hero__button-text-desktop">Получить бесплатную консультацию</span>
               <span class="hero__button-text-mobile">Бесплатная консультация</span>
@@ -134,7 +134,13 @@
 
       <section class="about">
         <div class="about__container container" data-accordion="parent" data-about-accordion>
-          <img class="about__image" src="img/2022.png" width="150" height="320" aria-hidden="true" alt="2022-й год.">
+
+          <div class="about__image">
+            <picture>
+              <source type="image/webp" srcset="img/2022.webp 1x, img/2022@2x.webp 2x">
+              <img src="img/2022.png" srcset="img/2022@2x.png 2x" width="150" height="320" aria-hidden="true" alt="">
+            </picture>
+          </div>
 
           <div class="about__content" data-accordion="element">
             <h2>О компании</h2>
@@ -144,11 +150,14 @@
             </p>
             <p>
               Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
-              REFOND. <span data-about-accordion="mobile"> Печатные платы и&nbsp;комплектующие Service Devices
-                применяются
-                на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома,
-                СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
+              REFOND.
             </p>
+            <p data-about-accordion="mobile"> Печатные платы и&nbsp;комплектующие Service Devices
+              применяются
+              на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома,
+              СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+            </p>
+
             <div class="no-js" data-accordion="content">
               <p>
                 Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
@@ -193,11 +202,11 @@
       <!-- form -->
 
       <section class="form" id="form">
-        <div class="form__container container " data-form-validate>
+        <div class="form__container container" data-form-validate>
           <div class="form__image-wrapper">
             <picture>
-              <source type="image/webp" srcset="img/paper_airplane.webp">
-              <img src="img/paper_airplane.png" width="510" height="285" alt="Бумажный самолетик.">
+              <source type="image/webp" srcset="img/paper_airplane.webp 1x, img/paper_airplane@2x.webp 2x">
+              <img src="img/paper_airplane.png" srcset="img/paper_airplane@2x.png  2x" width="510" height="285" alt="Бумажный самолетик.">
             </picture>
           </div>
           <form action="https://echo.htmlacademy.ru/" method="post">
@@ -246,30 +255,29 @@
       <div class="footer__container container">
         <div class="footer__social social">
           <div class="logo">
-            <a href="./index.html">
-              <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип компании Smart Device."
-                aria-hidden="true">
+            <a href="index.html">
+              <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип компании Smart Device.">
             </a>
           </div>
           <ul class="social__list">
             <li>
               <a class="social__link" href="#!" aria-label="Наша страница в Одноклассниках.">
-                <svg width="30" height="30">
-                  <use xlink:href="./img/sprite.svg#ok"></use>
+                <svg width="30" height="30" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#ok"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="social__link" href="#!" aria-label="Наше сообщество в Вконтакте.">
-                <svg width="30" height="30">
-                  <use xlink:href="./img/sprite.svg#vk"></use>
+                <svg width="30" height="30" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#vk"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="social__link" href="#!" aria-label="Наш профиль в Pinterest.">
-                <svg width="30" height="30">
-                  <use xlink:href="./img/sprite.svg#pinterest"></use>
+                <svg width="30" height="30" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#pinterest"></use>
                 </svg>
               </a>
             </li>
@@ -361,14 +369,14 @@
                 <span>Телефон</span>
               </label>
 
-              <div class="form__wide-input-wrapper form__wide-input-wrapper--modal">
+              <div class="form__textarea-wrapper form__textarea-wrapper--modal">
                 <label>
                   <textarea name="question" placeholder="Ваш вопрос"></textarea>
                   <span>Ваш вопрос</span>
                 </label>
               </div>
 
-              <div class="form__personal-checkbox-wrapper form__personal-checkbox-wrapper--modal">
+              <div class="form__checkbox-wrapper form__checkbox-wrapper--modal">
                 <label data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
                   <input type="checkbox" name="personal-data" required checked>
                   <span class="form__checkbox-mark"></span>
@@ -382,7 +390,7 @@
         </div>
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть модальное окно." data-close-modal>
           <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
+            <use href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
       </div>
