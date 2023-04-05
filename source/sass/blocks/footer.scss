@@ -1,5 +1,15 @@
 .footer {
   background-color: $color-black-pearl;
+
+  [data-accordion="content"] {
+    @media (min-width: 768px) {
+      overflow: initial;
+    }
+  }
+
+  .is-active > [data-accordion="content"] {
+    overflow: initial;
+  }
 }
 
 .footer__container {

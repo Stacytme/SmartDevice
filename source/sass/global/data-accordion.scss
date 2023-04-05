@@ -1,6 +1,5 @@
 [data-accordion="element"].is-active > [data-accordion="content"] {
   max-height: 100%;
-  overflow: initial;
 }
 
 [data-accordion="parent"].no-transition [data-accordion="content"] {

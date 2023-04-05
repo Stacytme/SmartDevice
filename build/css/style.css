@@ -639,7 +639,6 @@ button,
 
 [data-accordion=element].is-active > [data-accordion=content] {
   max-height: 100%;
-  overflow: initial;
 }
 
 [data-accordion=parent].no-transition [data-accordion=content] {
@@ -966,6 +965,10 @@ button,
 
 .footer {
   background-color: #041827;
+}
+
+.footer .is-active > [data-accordion=content] {
+  overflow: initial;
 }
 
 .footer__container {
@@ -1789,6 +1792,12 @@ button,
     }
   }
 */
+
+@media (min-width: 768px) {
+  .footer [data-accordion=content] {
+    overflow: initial;
+  }
+}
 
 @media (min-width: 1024px) and (min-width: 1024px) {
   .catalog li {
