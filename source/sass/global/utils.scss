@@ -69,7 +69,3 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
-
-[data-accordion="content"].no-js {
-  max-height: 100%;
-}

@@ -48,16 +48,13 @@
 
 .header__contacts {
   display: grid;
-  grid-template-columns: repeat(2, minmax(225px, 1fr));
-  column-gap: 6%;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 9.5%;
   width: 40%;
+  max-width: 459px;
   margin-right: 0 auto;
   padding-top: 13px;
   box-sizing: border-box;
-
-  @include vp-1439 {
-    width: 50%;
-  }
 
   @include vp-1023 {
     display: flex;
@@ -77,6 +74,7 @@
   font-size: 16px;
   line-height: 18px;
   color: $color-alice-blue;
+  padding-bottom: 10px;
 
   @include vp-1023 {
     padding: 20px 10px;
@@ -117,6 +115,7 @@
   color: $color-alice-blue;
   border: 1px solid $color-alice-blue;
   min-width: 160px;
+  max-width: 250px;
   padding: 8px 10px 13px;
   margin-top: 6px;
 

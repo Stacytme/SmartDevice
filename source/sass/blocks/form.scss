@@ -159,7 +159,6 @@
   label {
     position: relative;
     display: block;
-    overflow: hidden;
 
     @include hover-focus {
       cursor: text;
@@ -167,7 +166,7 @@
       & input:not([type="checkbox"]),
       & textarea {
         border: none;
-        outline: 1px solid $color-default-white;
+        outline: 1px solid $color-deep-sky-blue;
         background-color: rgba($color-black-pearl, 0.08);
       }
     }
@@ -176,7 +175,7 @@
       & input:not([type="checkbox"]),
       & textarea {
         border: none;
-        outline: 1px solid $color-default-white;
+        outline: 1px solid $color-deep-sky-blue;
         background-color: rgba($color-black-pearl, 0.08);
       }
     }
@@ -261,17 +260,13 @@
 
   [type="checkbox"] {
     position: absolute;
-
     width: 1px;
     height: 1px;
     margin: -1px;
     padding: 0;
     overflow: hidden;
-
     white-space: nowrap;
-
     border: 0;
-
     clip: rect(0 0 0 0);
     clip-path: inset(100%);
   }
@@ -355,7 +350,13 @@
     padding-left: 10px;
     place-self: end start;
   }
-}
+
+  .input-message {
+    position: absolute;
+    top: 37px;
+    left: 0;
+  }
+  }
 
 .form__checkbox-mark {
   position: relative;

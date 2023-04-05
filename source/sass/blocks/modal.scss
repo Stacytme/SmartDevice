@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: rgba($color-black-pearl-overlay, 0.7);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -83,6 +83,11 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+
+    @include hover-focus {
+      border: 1px solid $color-default-white;
+    }
   }
 
   &--responsive {

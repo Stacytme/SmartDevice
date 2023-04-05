@@ -76,7 +76,7 @@
           <div class="hero__content">
             <h2>Печатные платы</h2>
             <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-            <a class="hero__button btn" href="#feedback">
+            <a class="hero__button btn" href="#form">
               <span class="hero__button-text-desktop">Получить бесплатную консультацию</span>
               <span class="hero__button-text-mobile">Бесплатная консультация</span>
             </a>
@@ -202,7 +202,7 @@
       <!-- form -->
 
       <section class="form" id="form">
-        <div class="form__container container" data-form-validate>
+        <div class="form__container container" data-form-validate data-callback="base">
           <div class="form__image-wrapper">
             <picture>
               <source type="image/webp" srcset="img/paper_airplane.webp 1x, img/paper_airplane@2x.webp 2x">
@@ -217,14 +217,14 @@
             <div class="form__inputs-wrapper">
               <label data-required data-validate-type="text" data-limitation="name"
                 data-message-base="Поле обязательно к заполнению">
-                <input type="text" name="name" placeholder="Имя" minlength="1" required>
+                <input type="text" name="name" placeholder="Имя" autocomplete="off" minlength="1" required>
                 <span>Имя</span>
               </label>
 
               <label data-required data-on-input-validate data-validate-type="phone"
                 data-message-base="Поле обязательно к заполнению"
                 data-message-extra="Проверьте корректность заполнения поля">
-                <input type="tel" name="phone" placeholder="Телефон" required>
+                <input type="tel" name="phone" placeholder="Телефон" autocomplete="off" required>
                 <span>Телефон</span>
               </label>
 
@@ -351,7 +351,7 @@
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content form form--modal">
-        <div class="form__container form__container--modal" data-form-validate>
+        <div class="form__container form__container--modal" data-form-validate data-callback="base">
           <form action="https://echo.htmlacademy.ru/" method="post">
             <h2>Закажите звонок</h2>
             <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
@@ -359,14 +359,14 @@
             <div class="form__inputs-wrapper form__inputs-wrapper--modal">
               <label data-required data-validate-type="text" data-limitation="name"
                 data-message-base="Поле обязательно к заполнению">
-                <input type="text" name="name" placeholder="Имя" minlength="1" required>
+                <input type="text" name="name" placeholder="Имя" minlength="1" autocomplete="off" required>
                 <span>Имя</span>
               </label>
 
               <label data-required data-on-input-validate data-validate-type="phone"
                 data-message-base="Поле обязательно к заполнению"
                 data-message-extra="Проверьте корректность заполнения поля">
-                <input type="tel" name="phone" placeholder="Телефон" required>
+                <input type="tel" name="phone" placeholder="Телефон" autocomplete="off" required>
                 <span>Телефон</span>
               </label>
 

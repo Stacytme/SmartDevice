@@ -389,7 +389,7 @@ template {
   font-weight: 400;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../fonts/robotocondensed-regular.woff2") format("woff2");
+  src: url("../fonts/robotocondensed-400.woff2") format("woff2");
 }
 
 @font-face {
@@ -397,7 +397,7 @@ template {
   font-weight: 700;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../fonts/robotocondensed-bold.woff2") format("woff2");
+  src: url("../fonts/robotocondensed-700.woff2") format("woff2");
 }
 
 @font-face {
@@ -405,7 +405,7 @@ template {
   font-weight: 400;
   font-family: "PT Mono";
   font-display: swap;
-  src: url("../fonts/ptmono-regular.woff2") format("woff2");
+  src: url("../fonts/ptmono-400.woff2") format("woff2");
 }
 
 *,
@@ -630,10 +630,6 @@ button,
   outline: none;
 }
 
-[data-accordion=content].no-js {
-  max-height: 100%;
-}
-
 .container {
   width: 100%;
   max-width: 1300px;
@@ -643,6 +639,7 @@ button,
 
 [data-accordion=element].is-active > [data-accordion=content] {
   max-height: 100%;
+  overflow: initial;
 }
 
 [data-accordion=parent].no-transition [data-accordion=content] {
@@ -657,6 +654,10 @@ button,
   -o-transition: max-height 0.3s;
   transition: max-height 0.3s;
   overflow: hidden;
+}
+
+[data-accordion=content].no-js {
+  max-height: 100%;
 }
 
 [data-about-accordion=mobile] {
@@ -733,19 +734,6 @@ button,
   width: 100%;
 }
 
-.accordion__button.focus-visible:focus {
-  color: #00b2ff;
-}
-
-.accordion__button.focus-visible:focus::before,
-.accordion__button.focus-visible:focus::after {
-  background-color: #00b2ff;
-}
-
-.accordion__button.focus-visible:active {
-  opacity: 0.5;
-}
-
 .accordion__section.is-active {
   padding-bottom: 20px;
 }
@@ -772,7 +760,7 @@ button,
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -839,6 +827,10 @@ button,
   cursor: pointer;
 }
 
+.modal__close-btn.focus-visible:focus {
+  border: 1px solid #ffffff;
+}
+
 .modal--responsive .modal__content {
   width: 100%;
 }
@@ -903,12 +895,13 @@ button,
 .header__contacts {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(225px, 1fr))[2];
-  grid-template-columns: repeat(2, minmax(225px, 1fr));
-  -webkit-column-gap: 6%;
-  -moz-column-gap: 6%;
-  column-gap: 6%;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 9.5%;
+  -moz-column-gap: 9.5%;
+  column-gap: 9.5%;
   width: 40%;
+  max-width: 459px;
   margin-right: 0 auto;
   padding-top: 13px;
   -webkit-box-sizing: border-box;
@@ -925,6 +918,7 @@ button,
   font-size: 16px;
   line-height: 18px;
   color: #f2f5f7;
+  padding-bottom: 10px;
 }
 
 .header__contacts-link.focus-visible:focus {
@@ -945,6 +939,7 @@ button,
   color: #f2f5f7;
   border: 1px solid #f2f5f7;
   min-width: 160px;
+  max-width: 250px;
   padding: 8px 10px 13px;
   margin-top: 6px;
 }
@@ -1503,7 +1498,6 @@ button,
 .form__inputs-wrapper label {
   position: relative;
   display: block;
-  overflow: hidden;
 }
 
 .form__inputs-wrapper label.focus-visible:focus {
@@ -1513,14 +1507,14 @@ button,
 .form__inputs-wrapper label.focus-visible:focus input:not([type=checkbox]),
 .form__inputs-wrapper label.focus-visible:focus textarea {
   border: none;
-  outline: 1px solid #ffffff;
+  outline: 1px solid #00b2ff;
   background-color: rgba(4, 24, 39, 0.08);
 }
 
 .form__inputs-wrapper label:focus-within input:not([type=checkbox]),
 .form__inputs-wrapper label:focus-within textarea {
   border: none;
-  outline: 1px solid #ffffff;
+  outline: 1px solid #00b2ff;
   background-color: rgba(4, 24, 39, 0.08);
 }
 
@@ -1700,6 +1694,12 @@ button,
   place-self: end start;
 }
 
+.form__checkbox-wrapper .input-message {
+  position: absolute;
+  top: 37px;
+  left: 0;
+}
+
 .form__checkbox-mark {
   position: relative;
   display: inline-block;
@@ -1815,12 +1815,6 @@ button,
 
   .catalog li:nth-child(3n) {
     background-image: url("../img/card3-desktop@2x.jpg");
-  }
-}
-
-@media (max-width: 1439px) {
-  .header__contacts {
-    width: 50%;
   }
 }
 
@@ -2124,6 +2118,10 @@ button,
 }
 
 @media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+
   .container {
     padding: 0 25px;
   }
@@ -2670,18 +2668,19 @@ button,
   }
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  html html {
+    scroll-behavior: auto;
+  }
+}
+
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 
-  .accordion__button:hover:not(.focus-visible) {
-    color: #00b2ff;
-  }
-
-  .accordion__button:hover:not(.focus-visible)::before,
-  .accordion__button:hover:not(.focus-visible)::after {
-    background-color: #00b2ff;
+  .modal__close-btn:hover:not(.focus-visible) {
+    border: 1px solid #ffffff;
   }
 
   .header__contacts-link:hover:not(.focus-visible) {
@@ -2748,7 +2747,7 @@ button,
   .form__inputs-wrapper label:hover:not(.focus-visible) input:not([type=checkbox]),
   .form__inputs-wrapper label:hover:not(.focus-visible) textarea {
     border: none;
-    outline: 1px solid #ffffff;
+    outline: 1px solid #00b2ff;
     background-color: rgba(4, 24, 39, 0.08);
   }
 
