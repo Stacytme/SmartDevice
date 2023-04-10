@@ -118,6 +118,7 @@
   max-width: 250px;
   padding: 8px 10px 13px;
   margin-top: 6px;
+  user-select: none;
 
   @include vp-1023 {
     display: none;

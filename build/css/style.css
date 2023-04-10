@@ -941,6 +941,10 @@ button,
   max-width: 250px;
   padding: 8px 10px 13px;
   margin-top: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .header__button.focus-visible:focus {
